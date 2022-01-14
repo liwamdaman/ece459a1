@@ -10,6 +10,8 @@ impl Packages {
             return;
         }
         println!("Package {}:", package_name);
+        println!("- dependency {:?}", "dep");
+        println!("+ {} satisfied by installed version {}", "dep", "459");
         // some sort of for loop...
     }
 
