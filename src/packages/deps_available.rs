@@ -1,4 +1,5 @@
 use rpkg::debversion;
+use rpkg::debversion::{DebianVersionNum, VersionRelation};
 use crate::Packages;
 use crate::packages::Dependency;
 
@@ -10,14 +11,43 @@ impl Packages {
             return;
         }
         println!("Package {}:", package_name);
-        println!("- dependency {:?}", "dep");
-        println!("+ {} satisfied by installed version {}", "dep", "459");
         // some sort of for loop...
+        let dependencies = self.dependencies.get(self.get_package_num(package_name)).unwrap();
+        for dep in  dependencies {
+            println!("- dependency {:?}", self.dep2str(dep));
+            match self.dep_is_satisfied(dep) {
+                None => {
+                    println!("-> not satisfied");
+                }
+                Some(package_name) => {
+                    println!("+ {} satisfied by installed version {}", package_name, self.installed_debvers.get(self.get_package_num(package_name)).unwrap());
+                }
+            }
+        }
     }
 
     /// Returns Some(package) which satisfies dependency dd, or None if not satisfied.
     pub fn dep_is_satisfied(&self, dd:&Dependency) -> Option<&str> {
         // presumably you should loop on dd
+        for alternative in dd {
+            if self.installed_debvers.contains_key(&alternative.package_num) {
+                match &alternative.rel_version {
+                    None => {
+                        // Dependency has no version requirement, so any installed version of the dependency is satisfactory
+                        return Some(self.get_package_name(alternative.package_num));
+                    }
+                    Some((required_version_relation, required_version)) => {
+                        // Dependency has version requirement, compare versions
+                        let required_v = required_version.parse::<debversion::DebianVersionNum>().unwrap();
+                        let installed_v = self.installed_debvers.get(&alternative.package_num).unwrap();
+                        if debversion::cmp_debversion_with_op(&required_version_relation, installed_v, &required_v) {
+                            return Some(self.get_package_name(alternative.package_num));
+                        }
+                        // Else, move on to next alternative
+                    }
+                }
+            }
+        }
         return None;
     }
 
@@ -27,6 +57,14 @@ impl Packages {
         assert! (self.dep_is_satisfied(dd).is_none());
         let mut result = vec![];
         // another loop on dd
+        for alternative in dd {
+            if self.installed_debvers.contains_key(&alternative.package_num) {
+                // We can assume this means that the dependency has a version requirement that is not met by the installed version, no need to check
+                result.push(self.get_package_name(alternative.package_num));
+                // TODO: do we just need to push the package name?
+            }
+            // No versions have been installed yet for this alternative, do not add to result
+        }
         return result;
     }
 }
