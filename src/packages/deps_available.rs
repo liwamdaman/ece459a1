@@ -61,7 +61,6 @@ impl Packages {
             if self.installed_debvers.contains_key(&alternative.package_num) {
                 // We can assume this means that the dependency has a version requirement that is not met by the installed version, no need to check
                 result.push(self.get_package_name(alternative.package_num));
-                // TODO: do we just need to push the package name?
             }
             // No versions have been installed yet for this alternative, do not add to result
         }

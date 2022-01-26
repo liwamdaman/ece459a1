@@ -1,26 +1,101 @@
 #V2
-deps-available 4g8
-li data/installed-packages
-deps-available 4g8
-info 4g8
-ld
-info 4g8
-deps-available 4g8
+deps libc6
+deps apt
+deps 3depict
+deps libzydis-dev
+deps-available 0ad
+deps-available ruby-trollop
+deps-available libequinox-p2-touchpoint-eclipse-java
+deps-available librust-libgit2-sys+libssh2-sys-dev
+deps-available bash
+deps-available package-that-doesn't-exist
+deps-available wreport-common
 deps-available a2ps
-info a2ps
-deps a2ps
-deps-available a2ps
+deps-available node-mimic-response
+deps-available traceroute
+deps-available tracker
+deps-available emacs
+deps-available dwz
+deps-available debianutils
 deps-available 4g8
-ld
-deps-available 4g8
-deps-available achilles
-deps-available openprinting-pods
-deps-available openprinting-ppds
-how-to-install
-how-to-install 4g8
-how-to-install a2ps
-deps_available a2ps
-deps-available a2ps
-deps-available 4g8
+deps-available libc6
+deps-available apt
 deps-available 3depict
-how-to-install 3depict
+deps-available libzydis-dev
+enq-verify 0ad
+enq-verify ruby-trollop
+enq-verify libequinox-p2-touchpoint-eclipse-java
+enq-verify librust-libgit2-sys+libssh2-sys-dev
+enq-verify bash
+enq-verify package-that-doesn't-exist
+enq-verify wreport-common
+enq-verify a2ps
+enq-verify node-mimic-response
+enq-verify traceroute
+enq-verify tracker
+enq-verify emacs
+enq-verify dwz
+enq-verify debianutils
+enq-verify 4g8
+enq-verify libc6
+enq-verify apt
+enq-verify 3depict
+enq-verify libzydis-dev
+execute
+enq-verify 0ad 1.5.2-9
+enq-verify ruby-trollop 1.2.2-9
+enq-verify libequinox-p2-touchpoint-eclipse-java 18.5.2-9
+enq-verify librust-libgit2-sys+libssh2-sys-dev 1.5.2-9-9.1.3.2
+enq-verify bash 1.5.2-9-9.12.3.2
+enq-verify package-that-doesn't-exist 1.5.2-9-9.1.33.2
+enq-verify wreport-common 15.5.2-9-9.1.3.2
+enq-verify a2ps 1.5.2-9-9.13.312.2
+enq-verify node-mimic-response 1
+enq-verify traceroute 2
+enq-verify tracker 3
+enq-verify emacs 4
+enq-verify dwz 5
+enq-verify debianutils 6
+enq-verify 4g8 7
+enq-verify libc6 8
+enq-verify apt 9
+enq-verify 3depict 10
+enq-verify libzydis-dev 11.2
+execute
+enq-verify 0ad
+enq-verify ruby-trollop 1.2.2-9
+enq-verify libequinox-p2-touchpoint-eclipse-java
+enq-verify librust-libgit2-sys+libssh2-sys-dev 1.5.2-9-9.1.3.2
+enq-verify bash
+enq-verify package-that-doesn't-exist 1.5.2-9-9.1.33.2
+enq-verify wreport-common
+execute
+enq-verify bash
+enq-verify e2fsprogs-l10n
+enq-verify etables
+enq-verify pmd2odg
+enq-verify libghc-uri-bytestring-aeson-prof
+enq-verify bash 1020202032
+enq-verify python3-openvswitch
+execute
+enq-verify wadc
+execute
+enq-verify lua-sql-sqlite3
+execute
+enq-verify libg15daemon-client1
+execute
+enq-verify libbetter-appframework-java
+enq-verify perlprimer-doc
+enq-verify ruby-websocket-driver
+enq-verify libfolks-eds-doc
+enq-verify python3-zzzeeksphinx
+enq-verify libfm-doc
+execute
+enq-verify libfreemarker-java
+enq-verify 2048-qt
+enq-verify libhash-fieldhash-perl
+enq-verify php-illuminate-notifications
+enq-verify librust-diesel+deprecated-time-dev
+enq-verify dgedit
+enq-verify arriero
+quit
