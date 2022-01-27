@@ -1,80 +1,4 @@
 #V2
-deps libc6
-deps apt
-deps 3depict
-deps libzydis-dev
-deps-available 0ad
-deps-available ruby-trollop
-deps-available libequinox-p2-touchpoint-eclipse-java
-deps-available librust-libgit2-sys+libssh2-sys-dev
-deps-available bash
-deps-available package-that-doesn't-exist
-deps-available wreport-common
-deps-available a2ps
-deps-available node-mimic-response
-deps-available traceroute
-deps-available tracker
-deps-available emacs
-deps-available dwz
-deps-available debianutils
-deps-available 4g8
-deps-available libc6
-deps-available apt
-deps-available 3depict
-deps-available libzydis-dev
-enq-verify 0ad
-enq-verify ruby-trollop
-enq-verify libequinox-p2-touchpoint-eclipse-java
-enq-verify librust-libgit2-sys+libssh2-sys-dev
-enq-verify bash
-enq-verify package-that-doesn't-exist
-enq-verify wreport-common
-enq-verify a2ps
-enq-verify node-mimic-response
-enq-verify traceroute
-enq-verify tracker
-enq-verify emacs
-enq-verify dwz
-enq-verify debianutils
-enq-verify 4g8
-enq-verify libc6
-enq-verify apt
-enq-verify 3depict
-enq-verify libzydis-dev
-execute
-enq-verify 0ad 1.5.2-9
-enq-verify ruby-trollop 1.2.2-9
-enq-verify libequinox-p2-touchpoint-eclipse-java 18.5.2-9
-enq-verify librust-libgit2-sys+libssh2-sys-dev 1.5.2-9-9.1.3.2
-enq-verify bash 1.5.2-9-9.12.3.2
-enq-verify package-that-doesn't-exist 1.5.2-9-9.1.33.2
-enq-verify wreport-common 15.5.2-9-9.1.3.2
-enq-verify a2ps 1.5.2-9-9.13.312.2
-enq-verify node-mimic-response 1
-enq-verify traceroute 2
-enq-verify tracker 3
-enq-verify emacs 4
-enq-verify dwz 5
-enq-verify debianutils 6
-enq-verify 4g8 7
-enq-verify libc6 8
-enq-verify apt 9
-enq-verify 3depict 10
-enq-verify libzydis-dev 11.2
-execute
-enq-verify 0ad
-enq-verify ruby-trollop 1.2.2-9
-enq-verify libequinox-p2-touchpoint-eclipse-java
-enq-verify librust-libgit2-sys+libssh2-sys-dev 1.5.2-9-9.1.3.2
-enq-verify bash
-enq-verify package-that-doesn't-exist 1.5.2-9-9.1.33.2
-enq-verify wreport-common
-execute
-enq-verify bash
-enq-verify e2fsprogs-l10n
-enq-verify etables
-enq-verify pmd2odg
-enq-verify libghc-uri-bytestring-aeson-prof
 enq-verify bash 1020202032
 enq-verify python3-openvswitch
 execute
@@ -98,4 +22,80 @@ enq-verify php-illuminate-notifications
 enq-verify librust-diesel+deprecated-time-dev
 enq-verify dgedit
 enq-verify arriero
+quit
+load-csv data/packages.csv
+enq-verify bash
+execute
+enq-verify 0ad
+execute
+load-csv data/packages.csv
+enq-verify bash
+execute
+enq-verify 0ad
+execute
+load-csv data/packages.csv
+enq-verify bash
+execute
+enq-verify bash
+execute
+enq-verify 0ad
+execute
+enq-verify bash
+enq-verify 0ad
+execute
+enq-verify bash
+enq-verify 0ad
+enq-verify libc6 28
+execute
+ld
+transitive-dep-solution 0ad
+transitive-dep-solution ruby-trollop
+transitive-dep-solution libequinox-p2-touchpoint-eclipse-java
+transitive-dep-solution librust-libgit2-sys+libssh2-sys-dev
+transitive-dep-solution bash
+transitive-dep-solution wreport-common
+transitive-dep-solution a2ps
+transitive-dep-solution node-mimic-response
+transitive-dep-solution traceroute
+transitive-dep-solution tracker
+transitive-dep-solution emacs
+transitive-dep-solution dwz
+transitive-dep-solution debianutils
+transitive-dep-solution 4g8
+transitive-dep-solution libc6
+transitive-dep-solution apt
+transitive-dep-solution 3depict
+transitive-dep-solution libzydis-dev
+transitive-dep-solution python3-certifi
+transitive-dep-solution python3-pil.imagetk
+transitive-dep-solution libopus0
+transitive-dep-solution libtensorpipe0
+transitive-dep-solution libzxing-java
+transitive-dep-solution zram-tools
+transitive-dep-solution gnat-9-sparc64-linux-gnu
+transitive-dep-solution python3-stdnum
+transitive-dep-solution libzxing-core-java
+transitive-dep-solution libsciplot1
+transitive-dep-solution dovecot-imapd
+transitive-dep-solution libmrtd-dev
+transitive-dep-solution elpa-zzz-to-char
+transitive-dep-solution libkf5contacts5
+transitive-dep-solution libffcall1b
+transitive-dep-solution libhmsbeagle1v5
+transitive-dep-solution wadc
+transitive-dep-solution lua-sql-sqlite3
+transitive-dep-solution libg15daemon-client1
+transitive-dep-solution libbetter-appframework-java
+transitive-dep-solution perlprimer-doc
+transitive-dep-solution ruby-websocket-driver
+transitive-dep-solution libfolks-eds-doc
+transitive-dep-solution python3-zzzeeksphinx
+transitive-dep-solution libfm-doc
+transitive-dep-solution libfreemarker-java
+transitive-dep-solution 2048-qt
+transitive-dep-solution libhash-fieldhash-perl
+transitive-dep-solution php-illuminate-notifications
+transitive-dep-solution librust-diesel+deprecated-time-dev
+transitive-dep-solution dgedit
+transitive-dep-solution arriero
 quit
